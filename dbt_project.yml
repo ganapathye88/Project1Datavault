@@ -2,26 +2,52 @@ name: 'Project1Datavault'
 version: '1.0'
 config-version: 2
 
+profile: 'default'
+
 model-paths: ["models"]
 seed-paths: ["seeds"]
-test-paths: ["tests"]
 macro-paths: ["macros"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
 
 models:
   Project1Datavault:
 
     staging:
       +materialized: view
+      +database: DBT_DV
       +schema: STAGING
 
     hubs:
       +materialized: table
+      +database: DBT_DV
       +schema: DV
 
     links:
       +materialized: table
+      +database: DBT_DV
       +schema: DV
 
     satellites:
       +materialized: table
+      +database: DBT_DV
       +schema: DV
+
+seeds:
+  Project1Datavault:
+    +database: DBT_DV
+    +schema: RAW
+
+tests:
+  Project1Datavault:
+    +store_failures: true
+
+quoting:
+  database: false
+  schema: false
+  identifier: false

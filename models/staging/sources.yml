@@ -6,6 +6,6 @@ sources:
     schema: RAW
 
     tables:
-      - name: customer
-      - name: product
-      - name: orders
+      - name: CUSTOMER
+      - name: PRODUCT
+      - name: ORDERS

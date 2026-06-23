@@ -1,7 +1,7 @@
 with source_data as (
 
 select *
-from {{ source('raw','product') }}
+from {{ source('raw','PRODUCT') }}
 
 )
 

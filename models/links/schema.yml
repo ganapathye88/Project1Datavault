@@ -2,7 +2,6 @@ version: 2
 
 models:
   - name: link_customer_product
-    description: Customer Product Link
 
     columns:
 
