@@ -1,0 +1,21 @@
+version: 2
+
+models:
+
+  - name: hub_customer
+    description: Customer hub
+
+    columns:
+      - name: customer_hk
+        tests:
+          - unique
+          - not_null
+
+  - name: hub_product
+    description: Product hub
+
+    columns:
+      - name: product_hk
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+  - name: sat_customer
+
+    columns:
+
+      - name: customer_hk
+        tests:
+          - not_null
+
+  - name: sat_product
+
+    columns:
+
+      - name: product_hk
+        tests:
+          - not_null

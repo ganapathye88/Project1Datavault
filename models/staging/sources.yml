@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DBT_DV
+    schema: RAW
+
+    tables:
+      - name: customer
+      - name: product
+      - name: orders

@@ -1,16 +1,27 @@
-name: 'dbt-data-vault-assignment'
+name: 'Project1Datavault'
 version: '1.0'
 config-version: 2
-profile: 'default'
 
-model-paths: ['models']
-seed-paths: ['seeds']
-macro-paths: ['macros']
-snapshot-paths: ['snapshots']
-analysis-paths: ['analyses']
-test-paths: ['tests']
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
 
-target-path: 'target'
-clean-targets:
-  - 'target'
-  - 'dbt_modules'
+models:
+  Project1Datavault:
+
+    staging:
+      +materialized: view
+      +schema: STAGING
+
+    hubs:
+      +materialized: table
+      +schema: DV
+
+    links:
+      +materialized: table
+      +schema: DV
+
+    satellites:
+      +materialized: table
+      +schema: DV

@@ -1,0 +1,11 @@
+product_id,product_name,category
+P100,Laptop,Electronics
+P101,Phone,Electronics
+P102,Mouse,Accessories
+P103,Keyboard,Accessories
+P104,Tablet,Electronics
+P105,Monitor,Electronics
+P106,Speaker,Audio
+P107,Headphone,Audio
+P108,Printer,Office
+P109,Webcam,Office
