@@ -1,19 +1,21 @@
 version: 2
 
 models:
-
   - name: link_customer_product
+    description: Customer Product Link
 
     columns:
 
       - name: customer_hk
         tests:
           - relationships:
-              to: ref('hub_customer')
-              field: customer_hk
+              arguments:
+                to: ref('hub_customer')
+                field: customer_hk
 
       - name: product_hk
         tests:
           - relationships:
-              to: ref('hub_product')
-              field: product_hk
+              arguments:
+                to: ref('hub_product')
+                field: product_hk
