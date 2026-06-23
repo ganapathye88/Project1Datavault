@@ -1,0 +1,16 @@
+name: 'dbt-data-vault-assignment'
+version: '1.0'
+config-version: 2
+profile: 'default'
+
+model-paths: ['models']
+seed-paths: ['seeds']
+macro-paths: ['macros']
+snapshot-paths: ['snapshots']
+analysis-paths: ['analyses']
+test-paths: ['tests']
+
+target-path: 'target'
+clean-targets:
+  - 'target'
+  - 'dbt_modules'
